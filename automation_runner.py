@@ -59,7 +59,12 @@ special_delays = {
     (456, 606): 1,
     (1805, 321): 5,
     (1814, 415): 5,
-    (1806, 443): 4
+    (1806, 443): 4,
+    (1818, 257): 4,
+    (1807, 321): 5,
+    (1813, 414): 5,
+    (1808, 444): 5,
+    (1815, 231): 5
 }
 
 # === Clicks Step 1 (NQ) ===
@@ -168,8 +173,100 @@ clicks_step5 = [
     (242, 16, 'left'), 1                 # Step 13
 ]
 
-# === Clicks Step 6 (Blind Spots) ===
-clicks_step6 = []
+# === Clicks Step 6 (Blind Spots ES) ===
+clicks_step6 = [
+    (242, 21, 'left'), 1,                # Step 1
+    (1818, 257, 'left'), 1,              # Step 2
+    4,                                   # 4-second delay
+    (646, 531, 'drag_start'),            # Step 3 drag start
+    (974, 670, 'drag_end'), 1,           # Step 3 drag end
+    (826, 580, 'right'), 1,              # Step 4
+    (888, 601, 'left'), 1,               # Step 5
+    (285, 21, 'left'), 1,                # Step 6
+    (226, 369, 'left'), 1,               # Step 7
+    (291, 368, 'left'), 1,               # Step 8
+    (1074, 330, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1175, 1110, 'left'), 1,             # Step 12
+    (242, 19, 'left'), 1                 # Step 13
+]
+
+# === Clicks Step 7 (Blind Spots SPX) ===
+clicks_step7 = [
+    (239, 16, 'left'), 1,                # Step 1
+    (1807, 321, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (646, 531, 'drag_start'),            # Step 3 drag start
+    (974, 670, 'drag_end'), 1,           # Step 3 drag end
+    (811, 560, 'right'), 1,              # Step 4
+    (910, 587, 'left'), 1,               # Step 5
+    (287, 20, 'left'), 1,                # Step 6
+    (227, 374, 'left'), 1,               # Step 7
+    (291, 370, 'left'), 1,               # Step 8
+    (1062, 382, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1177, 1110, 'left'), 1,             # Step 12
+    (244, 19, 'left'), 1                 # Step 13
+]
+
+# === Clicks Step 8 (Blind Spots QQQ) ===
+clicks_step8 = [
+    (245, 17, 'left'), 1,                # Step 1
+    (1813, 414, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (646, 531, 'drag_start'),            # Step 3 drag start
+    (974, 670, 'drag_end'), 1,           # Step 3 drag end
+    (843, 589, 'right'), 1,              # Step 4
+    (920, 618, 'left'), 1,               # Step 5
+    (288, 20, 'left'), 1,                # Step 6
+    (215, 374, 'left'), 1,               # Step 7
+    (292, 371, 'left'), 1,               # Step 8
+    (1057, 431, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1178, 1109, 'left'), 1,             # Step 12
+    (242, 24, 'left'), 1                 # Step 13
+]
+
+# === Clicks Step 9 (Blind Spots SPY) ===
+clicks_step9 = [
+    (244, 21, 'left'), 1,                # Step 1
+    (1808, 444, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (646, 531, 'drag_start'),            # Step 3 drag start
+    (974, 670, 'drag_end'), 1,           # Step 3 drag end
+    (874, 587, 'right'), 1,              # Step 4
+    (943, 613, 'left'), 1,               # Step 5
+    (287, 19, 'left'), 1,                # Step 6
+    (209, 369, 'left'), 1,               # Step 7
+    (295, 372, 'left'), 1,               # Step 8
+    (1058, 483, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1174, 1104, 'left'), 1,             # Step 12
+    (245, 22, 'left'), 1                 # Step 13
+]
+
+# === Clicks Step 10 (Blind Spots NQ) ===
+clicks_step10 = [
+    (244, 19, 'left'), 1,                # Step 1
+    (1815, 231, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (646, 531, 'drag_start'),            # Step 3 drag start
+    (974, 670, 'drag_end'), 1,           # Step 3 drag end
+    (785, 537, 'right'), 1,              # Step 4
+    (850, 566, 'left'), 1,               # Step 5
+    (296, 25, 'left'), 1,                # Step 6
+    (225, 369, 'left'), 1,               # Step 7
+    (294, 370, 'left'), 1,               # Step 8
+    (1059, 535, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1172, 1112, 'left'), 1,             # Step 12
+    (245, 22, 'left'), 1                 # Step 13
+]
 
 # === Toggle Pause Function ===
 def monitor_pause():
@@ -183,14 +280,6 @@ def monitor_pause():
             pause_flag.set()
 
 threading.Thread(target=monitor_pause, daemon=True).start()
-
-# === Automated Step Input with Delay ===
-def automated_step_input():
-    print("\n🔹 Enter step(s) to run (1, 2, 3, 4, 5, 6, 1+2, 2+3, 3+4, 4+5, 5+6, etc.):")
-    selected = input("⬆️  Your choice: ").strip()
-    print("⏳ Preparing to run your selection in 3 seconds...")
-    time.sleep(3)
-    return selected
 
 # === Define logic for executing selected steps ===
 def run_click_sequence(sequence, delay=DEFAULT_DELAY):
@@ -237,6 +326,14 @@ def run_click_sequence(sequence, delay=DEFAULT_DELAY):
         time.sleep(delay)
     print("✅ Automation complete.")
 
+# === Automated Step Input with Delay ===
+def automated_step_input():
+    print("\n🔹 Enter step(s) to run (1-10, 1+2, 2+3, etc., test_es, test_spx, test_qqq, test_spy, test_nq):")
+    selected = input("⬆️  Your choice: ").strip().lower()
+    print("⏳ Preparing to run your selection in 3 seconds...")
+    time.sleep(3)
+    return selected
+
 # === Entry Point ===
 if __name__ == "__main__":
     selected_steps = automated_step_input()
@@ -253,6 +350,14 @@ if __name__ == "__main__":
         run_click_sequence(clicks_step5, delay=DEFAULT_DELAY)
     elif selected_steps == "6":
         run_click_sequence(clicks_step6, delay=DEFAULT_DELAY)
+    elif selected_steps == "7":
+        run_click_sequence(clicks_step7, delay=DEFAULT_DELAY)
+    elif selected_steps == "8":
+        run_click_sequence(clicks_step8, delay=DEFAULT_DELAY)
+    elif selected_steps == "9":
+        run_click_sequence(clicks_step9, delay=DEFAULT_DELAY)
+    elif selected_steps == "10":
+        run_click_sequence(clicks_step10, delay=DEFAULT_DELAY)
     elif selected_steps == "1+2":
         run_click_sequence(clicks + clicks_step2, delay=DEFAULT_DELAY)
     elif selected_steps == "2+3":
@@ -263,5 +368,28 @@ if __name__ == "__main__":
         run_click_sequence(clicks_step4 + clicks_step5, delay=DEFAULT_DELAY)
     elif selected_steps == "5+6":
         run_click_sequence(clicks_step5 + clicks_step6, delay=DEFAULT_DELAY)
+    elif selected_steps == "6+7":
+        run_click_sequence(clicks_step6 + clicks_step7, delay=DEFAULT_DELAY)
+    elif selected_steps == "7+8":
+        run_click_sequence(clicks_step7 + clicks_step8, delay=DEFAULT_DELAY)
+    elif selected_steps == "8+9":
+        run_click_sequence(clicks_step8 + clicks_step9, delay=DEFAULT_DELAY)
+    elif selected_steps == "9+10":
+        run_click_sequence(clicks_step9 + clicks_step10, delay=DEFAULT_DELAY)
+    elif selected_steps == "test_es":
+        print("\n🔹 Testing Blind Spots ES sequence only")
+        run_click_sequence(clicks_step6, delay=DEFAULT_DELAY)
+    elif selected_steps == "test_spx":
+        print("\n🔹 Testing Blind Spots SPX sequence only")
+        run_click_sequence(clicks_step7, delay=DEFAULT_DELAY)
+    elif selected_steps == "test_qqq":
+        print("\n🔹 Testing Blind Spots QQQ sequence only")
+        run_click_sequence(clicks_step8, delay=DEFAULT_DELAY)
+    elif selected_steps == "test_spy":
+        print("\n🔹 Testing Blind Spots SPY sequence only")
+        run_click_sequence(clicks_step9, delay=DEFAULT_DELAY)
+    elif selected_steps == "test_nq":
+        print("\n🔹 Testing Blind Spots NQ sequence only")
+        run_click_sequence(clicks_step10, delay=DEFAULT_DELAY)
     else:
         print("❌ Invalid selection.")
