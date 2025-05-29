@@ -53,11 +53,13 @@ def qwen_ocr(region):
 
 # === Special Delays ===
 special_delays = {
-    (1809, 414): 6,
-    (1819, 260): 6,
-    (1808, 327): 6,
-    (1829, 231): 6,
-    (1817, 258): 6
+    (1808, 324): 5,
+    (1812, 260): 5,
+    (397, 580): 1,
+    (456, 606): 1,
+    (1805, 321): 5,
+    (1814, 415): 5,
+    (1806, 443): 4
 }
 
 # === Clicks Step 1 (NQ) ===
@@ -91,50 +93,79 @@ clicks = [
 
 # === Clicks Step 2 (ES) ===
 clicks_step2 = [
-    (245, 19, 'left'),
-    (1809, 414, 'left'),
-    (1819, 260, 'left'),
-    (1817, 258, 'left'),
-    (256, 515, 'drag_start'), (590, 768, 'drag_end'),
-    (359, 614, 'right'), (421, 642, 'left'),
-    (296, 24, 'left'),
-    (142, 322, 'left'), (266, 319, 'left'), (1059, 384, 'left'),
-    ('ctrl+v',),
-    (246, 20, 'left')
+    (1808, 324, 'left'), 1,              # Step 1
+    5,                                   # 5-second delay
+    (1812, 260, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (253, 495, 'drag_start'),            # Step 3 drag start
+    (586, 751, 'drag_end'), 1,           # Step 3 drag end
+    (397, 580, 'right'), 1,              # Step 4
+    (456, 606, 'left'), 1,               # Step 5
+    (287, 18, 'left'), 1,                # Step 6
+    (205, 322, 'left'), 1,               # Step 7
+    (322, 321, 'left'), 1,               # Step 8
+    (1077, 385, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1173, 1110, 'left'), 1,             # Step 12
+    (245, 19, 'left'), 1                 # Step 13
 ]
 
 # === Clicks Step 3 (SPX) ===
 clicks_step3 = [
-    (242, 19, 'left'),
-    (1808, 327, 'left'),
-    6,
-    (1817, 258, 'left'),
-    6,
-    (256, 515, 'drag_start'), (590, 768, 'drag_end'),
-    (285, 23, 'left'), (167, 321, 'left'), (264, 321, 'left'), (1065, 434, 'left'),
-    ('ctrl+a',),
-    ('ctrl+v',),
-    (1121, 681, 'left')
+    (244, 22, 'left'), 1,                # Step 1
+    (1805, 321, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (253, 495, 'drag_start'),            # Step 3 drag start
+    (586, 751, 'drag_end'), 1,           # Step 3 drag end
+    (378, 585, 'right'), 1,              # Step 4
+    (444, 607, 'left'), 1,               # Step 5
+    (295, 16, 'left'), 1,                # Step 6
+    (181, 327, 'left'), 1,               # Step 7
+    (320, 325, 'left'), 1,               # Step 8
+    (1068, 432, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1172, 1111, 'left'), 1,             # Step 12
+    (243, 21, 'left'), 1                 # Step 13
 ]
 
 # === Clicks Step 4 (QQQ) ===
 clicks_step4 = [
-    (246, 18, 'left'),
-    (1812, 415, 'left'),
-    (336, 582, 'drag_start'), (402, 609, 'drag_end'),
-    (294, 21, 'left'),
-    (1075, 481, 'left'), (1086, 481, 'right'),
-    (1143, 778, 'left'), (1059, 483, 'right'),
-    (1127, 652, 'left'), (246, 21, 'left')
+    (243, 16, 'left'), 1,                # Step 1
+    (1814, 415, 'left'), 1,              # Step 2
+    5,                                   # 5-second delay
+    (253, 495, 'drag_start'),            # Step 3 drag start
+    (586, 751, 'drag_end'), 1,           # Step 3 drag end
+    (421, 626, 'right'), 1,              # Step 4
+    (487, 654, 'left'), 1,               # Step 5
+    (294, 21, 'left'), 1,                # Step 6
+    (248, 321, 'left'), 1,               # Step 7
+    (321, 322, 'left'), 1,               # Step 8
+    (1062, 483, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1177, 1111, 'left'), 1,             # Step 12
+    (244, 19, 'left'), 1                 # Step 13
 ]
 
 # === Clicks Step 5 (SPY) ===
 clicks_step5 = [
-    (242, 17, 'left'), (1808, 442, 'left'),
-    (359, 614, 'right'), (421, 642, 'left'), (296, 24, 'left'),
-    (142, 322, 'left'), (266, 319, 'left'), (1059, 384, 'left'),
-    ('ctrl+v',),
-    (246, 20, 'left')
+    (243, 15, 'left'), 1,                # Step 1
+    (1806, 443, 'left'), 1,              # Step 2
+    4,                                   # 4-second delay
+    (256, 546, 'drag_start'),            # Step 3 drag start
+    (568, 764, 'drag_end'), 1,           # Step 3 drag end
+    (454, 630, 'right'), 1,              # Step 4
+    (522, 661, 'left'), 1,               # Step 5
+    (287, 19, 'left'), 1,                # Step 6
+    (242, 327, 'left'), 1,               # Step 7
+    (321, 320, 'left'), 1,               # Step 8
+    (1074, 535, 'left'), 1,              # Step 9
+    ('ctrl+a',), 1,                      # Step 10 - Ctrl+A
+    ('ctrl+v',), 1,                      # Step 11 - Ctrl+V
+    (1171, 1105, 'left'), 1,             # Step 12
+    (242, 16, 'left'), 1                 # Step 13
 ]
 
 # === Clicks Step 6 (Blind Spots) ===
